@@ -1,11 +1,9 @@
-<html>
-
-  <head>
+<html><head>
     
     <title>CKY parsing demo</title>
-    <meta name="author" content="Martin Lazarov"/>
+    <meta name="author" content="Martin Lazarov" >
     
-    <script type="text/javascript">
+    <script type="text/javascript" >
     
     function array_index_of(a, e) {
       if (a != null) {
@@ -377,53 +375,50 @@
     
     </script>  
     
-  </head>
-  
-  <body>
-    <div id="cky_input">
-      <span class="label">Grammar <i>(needs to be in CNF)</i></span>
-      <br/>
-      <textarea id="idgram" cols="70" rows="15">S -> NP VP
-NP -> DET N
-NP -> NP PP
-PP -> P NP
-VP -> V NP
-VP -> VP PP
-DET -> the
-NP -> I
-N -> man
-N -> telescope
-P -> with
-V -> saw
-N -> cat
-N -> dog
-N -> pig
-N -> hill
-N -> park
-N -> roof
-P -> from
-P -> on
-P -> in
+  <link href="css/base.css" rel="stylesheet" media="screen" type="text/css" ></head><body style="" >
+    <div id="cky_input" style="" >
+      <span class="label" >Grammar <i>(needs to be in CNF)</i></span>&nbsp;&nbsp;Cite&nbsp;<a href="http://homepages.uni-tuebingen.de/student/martin.lazarov/demos/cky.html" >martin lazarov</a><br>&nbsp;&nbsp;<a href="http://homepages.uni-tuebingen.de/student/martin.lazarov/demos/cky.html" target="" name="martin lazarov" ></a>&nbsp;<br>
+      <textarea id="idgram" cols="70" rows="15" >S -&gt; NP VP
+NP -&gt; DET N
+NP -&gt; NP PP
+PP -&gt; P NP
+VP -&gt; V NP
+VP -&gt; VP PP
+DET -&gt; the
+NP -&gt; I
+N -&gt; man
+N -&gt; telescope
+P -&gt; with
+V -&gt; saw
+N -&gt; cat
+N -&gt; dog
+N -&gt; pig
+N -&gt; hill
+N -&gt; park
+N -&gt; roof
+P -&gt; from
+P -&gt; on
+P -&gt; in
 </textarea>
-      <p/>
-      <span class="label">Sentence</span>
-      <br/>
-      <input type="text" id="idsen" value="I saw the man with the telescope" size="80"/><br/>
-      <p/>
-      <span class="label">Chart update interval <i>(ms)</i></span>
-      <br/>
-      <input type="text" id="idupdint" value="100" size="3"/>
-      <p/>
-      <input type="button" value="Parse" onclick="UPDATE_INTERVAL = idupdint.value; do_parse();"/>
       <p>
-      <table width="600"><tr><td>Click on <b>Parse</b> to start the CKY parsing animation. Once the animation is running, you can click on the chart to pause/resume it. When it's done, click again on the chart to restart it. If you want to try another grammar/sentence, press Escape (or just refresh the page). And, yes, it's your responsibility to put the grammar in Chomsky normal form. <p>Have fun ;-)</p></td></tr></table></p>
+      <span class="label" >Sentence</span>
+      <br>
+      <input type="text" id="idsen" value="I saw the man with the telescope" size="80" /><br>
+      </p><p>
+      <span class="label" >Chart update interval <i>(ms)</i></span>
+      <br>
+      <input type="text" id="idupdint" value="100" size="3" />
+      </p><p>
+      <input type="button" value="Parse" onclick="UPDATE_INTERVAL = idupdint.value; do_parse();" />
+      </p><p>
+      <table width="600" ><tbody><tr><td>Click on <b>Parse</b> to start the CKY parsing animation. Once the animation is running, you can click on the chart to pause/resume it. When it's done, click again on the chart to restart it. If you want to try another grammar/sentence, press Escape (or just refresh the page). And, yes, it's your responsibility to put the grammar in Chomsky normal form. <p>Have fun ;-)</p></td></tr></tbody></table></p>
     </div>
-    <div id="cky_output" tabindex="1" style="display:none" onclick="pause_resume_animation()" onkeydown="chart_key_handler(event)">
-      <table id="tchart" width="100%" height="95%" border="1"></table>
-      <table id="tsentence" width="100%"></table>
+    <div id="cky_output" tabindex="1" style="display:none; " onclick="pause_resume_animation()" onkeydown="chart_key_handler(event)" >
+      <table id="tchart" width="100%" height="95%" border="1" ></table>
+      <table id="tsentence" width="100%" ></table>
     </div>
     <!-- Start of StatCounter Code -->
-<script type="text/javascript">
+<script type="text/javascript" >
 var sc_project=5134546; 
 var sc_invisible=1; 
 var sc_partition=58; 
@@ -431,14 +426,10 @@ var sc_click_stat=1;
 var sc_security="14632409"; 
 </script>
 
-<script type="text/javascript"
-src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
-class="statcounter"><a title="my space counter"
-href="http://www.statcounter.com/myspace/"
-target="_blank"><img class="statcounter"
-src="http://c.statcounter.com/5134546/0/14632409/1/" alt="my
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter.js" ></script><noscript><div class="statcounter" ><a title="my space counter" href="http://www.statcounter.com/myspace/" target="_blank" ><img class="statcounter" src="http://c.statcounter.com/5134546/0/14632409/1/" alt="my
 space counter" ></a></div></noscript>
 <!-- End of StatCounter Code -->
-  </body>
   
-</html>
+  
+
+</body></html>
