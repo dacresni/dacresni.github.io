@@ -1,17 +1,30 @@
+
 body {
-	color:#FFFFFF;
-	background-color:#000000;
+	color: white;
+	background-color: black;
 }
-
+@font-face {
+		font-family: pso; 
+		src: url(http://cs.slu.edu/~dacresni/pso_font.ttf);
+	}
+h1 {
+	color : green;
+	font-family: pso ;
+	
+}
 a {
-	color:#FF0000;
+	color: red;
 }
 
-.footer {
-	list-style-type:none;
+
+footer{
+	list-style-type: none;
 }
 
-ul.footer li {
-	display:inline;
+footer ul li {
+		display: inline;
 }
+
+
+
 
