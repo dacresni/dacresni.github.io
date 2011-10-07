@@ -23,9 +23,10 @@ google.load("feeds","1");
           for (var i = 0; i < result.feed.entries.length; i++) {
             var entry = result.feed.entries[i];
             var div = document.createElement("div");
-            div.appendChild(document.createTextNode(entry.title));
-            div.appendChild(document.createTextNode(entry.link));
-            div.appendChild(document.createTextNode(entry.contentSnippet));
+            anchor = document.createElement("a") 
+                anchor.setAttribute("href",entry.link)
+                anchor.appendChild(document.createTextNode(entry.title))
+            div.appendChild(anchor)
             container.appendChild(div);
           }
         }
@@ -36,9 +37,10 @@ google.load("feeds","1");
           for (var i = 0; i < result.feed.entries.length; i++) {
             var entry = result.feed.entries[i];
             var div = document.createElement("div");
-            div.appendChild(document.createTextNode(entry.title));
-            div.appendChild(document.createTextNode(entry.link));
-            div.appendChild(document.createTextNode(entry.contentSnippet));
+            anchor = document.createElement("a") 
+                anchor.setAttribute("href",entry.link)
+                anchor.appendChild(document.createTextNode(entry.title))
+            div.appendChild(anchor)
             container.appendChild(div);
           }
         }
