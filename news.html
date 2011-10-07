@@ -1,6 +1,62 @@
-<!DOCTYPE html> <!-- in html5 there's only one doctype --> 
+<!DOCTYPE html>
+<!-- in html5 there's only one doctype --> 
+<html>
 <head>
 <title>News  </title>
 <meta charset="utf-8">
-<link rel="stylesheet" href   ="bootstrap-1.2.0.css" type="text/css" > 
+<link rel="stylesheet" href="bootstrap-1.2.0.css" type="text/css" > 
+<link rel="stylesheet" href="css/base.css" type="text/css" > 
+<script src="https://www.google.com/jsapi?key=ABQIAAAAfwAYC6Pp1NQAjJdBXfJIVxTm39AwUPmlR8g9EC933jgzRpFBGBRYX9fd-O2pCeit7bAZF8iX6eo0GQ" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+
+
+
+google.load("feeds","1");
+    function initialize() {
+      var slashdot = new google.feeds.Feed("http://rss.slashdot.org/Slashdot/slashdot")
+      var kotaku= new google.feeds.Feed("http://feeds.gawker.com/kotaku/full")
+      slashdot.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("slashdot");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            var div = document.createElement("div");
+            div.appendChild(document.createTextNode(entry.title));
+            div.appendChild(document.createTextNode(entry.link));
+            div.appendChild(document.createTextNode(entry.contentSnippet));
+            container.appendChild(div);
+          }
+        }
+      });
+      kotaku.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("kotaku");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            var div = document.createElement("div");
+            div.appendChild(document.createTextNode(entry.title));
+            div.appendChild(document.createTextNode(entry.link));
+            div.appendChild(document.createTextNode(entry.contentSnippet));
+            container.appendChild(div);
+          }
+        }
+      });
+
+
+
+
+    }
+    google.setOnLoadCallback(initialize);
+
+    </script>
+  </head>
+  <body>
+    <div class="row" >
+    <div id="slashdot" class="span6"></div>
+    <div id="kotaku" class="span6"></div>
+
+  </body>
+</html>
 
