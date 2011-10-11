@@ -16,6 +16,7 @@
 google.load("feeds","1");
     function initialize() {
       var slashdot = new google.feeds.Feed("http://rss.slashdot.org/Slashdot/slashdot")
+      var theH = new google.feeds.Feed("http://rss.feedsportal.com/c/32569/f/491734/index.rss")
       var kotaku= new google.feeds.Feed("http://feeds.gawker.com/kotaku/full")
       slashdot.load(function(result) {
         if (!result.error) {
@@ -36,7 +37,7 @@ google.load("feeds","1");
           var container = document.getElementById("kotaku");
           for (var i = 0; i < result.feed.entries.length; i++) {
             var entry = result.feed.entries[i];
-            var div = document.createElement("div");
+            var div = document.createElement("li");
             anchor = document.createElement("a") 
                 anchor.setAttribute("href",entry.link)
                 anchor.appendChild(document.createTextNode(entry.title))
@@ -45,6 +46,23 @@ google.load("feeds","1");
           }
         }
       });
+
+    theH.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("the-h");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            var list = document.createElement("li");
+            anchor = document.createElement("a") 
+                anchor.setAttribute("href",entry.link)
+                anchor.appendChild(document.createTextNode(entry.title))
+            list.appendChild(anchor)
+            container.appendChild(list);
+          }
+        }
+      });
+
+
     }
     google.setOnLoadCallback(initialize);
     
@@ -52,8 +70,19 @@ google.load("feeds","1");
   </head>
   <body>
     <div class="row" >
-    <div id="slashdot" class="span6"></div>
-    <div id="kotaku" class="span6"></div>
+    <div id="slashdot" class="span6">
+        <h1> Slashdot </h1>
+        <ul class="unstyled" id="slashdot" > </ul>
+    </div>
+    <div class="span6">
+        <h1> Kotaku </h1>
+        <ul class="unstyled" id="kotaku" > </ul>
+    </div>
+        
+    <div class="span6"> 
+        <h1> The H </h1>
+        <ul class="unstyled" id="the-h" > </ul>
+    </div>
 
   </body>
 </html>
