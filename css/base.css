@@ -10,7 +10,10 @@ nav {
 p {
     display:block
 }
-@font-face { font-family: pso; src: url('pso_font.TTF'); }
+@font-face { font-family: pso; 
+    src: url('pso_font.TTF'); 
+    
+}
 
 h1 {
 	color:#00F94B;
