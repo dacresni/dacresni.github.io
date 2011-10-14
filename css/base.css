@@ -1,8 +1,15 @@
 body {
 	color:#FFFFFF;
 	background-color:#000000;
-}
+        padding-top: 20px;
 
+}
+nav {
+    
+}
+p {
+    display:block
+}
 @font-face { font-family: pso; src: url('pso_font.TTF'); }
 
 h1 {
@@ -11,12 +18,13 @@ h1 {
 }
 
 a {
-	color:white;
+	color:cyan;
 }
 
 a:hover {
-        color: #00ffff
+        color:white;
 }
+
 
 footer {
 	list-style-type:none;
