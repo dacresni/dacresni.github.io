@@ -6,12 +6,12 @@ body {
 @font-face { font-family: pso; src: url('pso_font.TTF'); }
 
 h1 {
-	color: #00f94b;
+	color:#00F94B;
 	font-family:pso;
 }
 
 a {
-	color:#FF0000;
+	color:white;
 }
 
 footer {
