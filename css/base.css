@@ -10,14 +10,25 @@ nav {
 p {
     display:block
 }
-@font-face { font-family: pso; 
+
+@font-face {
+    font-family: pso; 
     src: url('pso_font.TTF'); 
-    
+} 
+
+@font-face {
+    font-family: HuRaMar; 
+    src: url('psoHRmar.TTF'); 
 }
+
 
 h1 {
 	color:#00F94B;
 	font-family:pso;
+}
+h2 {
+    font-family:HuRaMar;
+	color:#00F94B;
 }
 
 a {
