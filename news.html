@@ -24,7 +24,7 @@ google.load("feeds","1");
           var container = document.getElementById("slashdot");
           for (var i = 0; i < result.feed.entries.length; i++) {
             var entry = result.feed.entries[i];
-            var div = document.createElement("div");
+            var div = document.createElement("li");
             anchor = document.createElement("a") 
                 anchor.setAttribute("href",entry.link)
                 anchor.appendChild(document.createTextNode(entry.title))
@@ -71,29 +71,29 @@ google.load("feeds","1");
   </head>
   <body>
     <nav class="topbar"> 
-       <h2 class=brand >News </h2>
+       <h1 class=brand >News </h1>
     </nav >
-    <div  class="container-fluid"> 
+    <div  class="container"> 
         <div class=content >
                 <br/>
         <section class="row" >
-            <div class="span12">
+            <div class="span16">
             <p>This is a page full of the kind of news I find most important.  </p>
             </div>
         </section>
         <section class="row">
             
-            <div id="slashdot" class="span6">
-                <h1> Slashdot </h1>
+            <div class="span-one-third">
+                <h2> Slashdot </h2>
                 <ul class="unstyled" id="slashdot" > </ul>
             </div>
-            <div class="span6">
-                <h1> Kotaku </h1>
+            <div class="span-one-third">
+                <h2> Kotaku </h2>
                 <ul class="unstyled" id="kotaku" > </ul>
             </div>
                 
-            <div class="span6"> 
-                <h1> The H </h1>
+            <div class="span-one-third">
+                <h2> The H </h2>
                 <ul class="unstyled" id="the-h" > </ul>
             </div>
         <div>

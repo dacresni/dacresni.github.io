@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Nova+Flat|Nova+Square);
+
 html {
     background-color:black;
 }
@@ -11,9 +13,9 @@ nav {
     
 }
 p {
-    display:block
+    font-family:'Nova Flat', cursive;
 }
-
+    
 @font-face {
     font-family: pso; 
     src: url('pso_font.TTF'); 
@@ -27,11 +29,11 @@ p {
 
 h1 {
 	color:#00F94B;
-	font-family:pso;
+	font-family: 'Nova Square', cursive; 
 }
 h2 {
-    font-family:HuRaMar;
 	color:#00F94B;
+    font-family:HuRaMar;
 }
 
 a {
