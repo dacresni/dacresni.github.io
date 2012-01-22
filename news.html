@@ -17,7 +17,7 @@
 google.load("feeds","1");
     function initialize() {
       var slashdot = new google.feeds.Feed("http://rss.slashdot.org/Slashdot/slashdot")
-      var theH = new google.feeds.Feed("http://rss.feedsportal.com/c/32569/f/491734/index.rss")
+      var theH = new google.feeds.Feed("http://www.h-online.com/grand-atom.xml")
       var kotaku= new google.feeds.Feed("http://feeds.gawker.com/kotaku/full")
       slashdot.load(function(result) {
         if (!result.error) {
