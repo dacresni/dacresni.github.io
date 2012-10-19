@@ -39,6 +39,7 @@ google.load("feeds","1");
           var container = document.getElementById("kotaku");
           for (var i = 0; i < result.feed.entries.length; i++) {
             var entry = result.feed.entries[i];
+            //for faster addition and avoid reflow use document.createDocumentFragment()
             var div = document.createElement("li");
             anchor = document.createElement("a") 
                 anchor.setAttribute("href",entry.link)
