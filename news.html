@@ -11,97 +11,73 @@
 <script src="https://www.google.com/jsapi?key=ABQIAAAAfwAYC6Pp1NQAjJdBXfJIVxTm39AwUPmlR8g9EC933jgzRpFBGBRYX9fd-O2pCeit7bAZF8iX6eo0GQ" type="text/javascript"></script>
 
 <script type="text/javascript">
-
-
-
-
 google.load("feeds","1");
     function initialize() {
       var slashdot = new google.feeds.Feed("http://rss.slashdot.org/Slashdot/slashdot")
+      //var siliconera= new google.feeds.Feed("http://feeds.feedburner.com/siliconera/MkOc?format=xml")
       var theH = new google.feeds.Feed("http://www.h-online.com/grand-atom.xml")
       var kotaku= new google.feeds.Feed("http://feeds.gawker.com/kotaku/full")
-      slashdot.load(function(result) {
-        if (!result.error) {
-          var container = document.getElementById("slashdot");
-          for (var i = 0; i < result.feed.entries.length; i++) {
-            var entry = result.feed.entries[i];
-            var div = document.createElement("li");
-            anchor = document.createElement("a") 
-                anchor.setAttribute("href",entry.link)
-                anchor.appendChild(document.createTextNode(entry.title))
-            div.appendChild(anchor)
-            container.appendChild(div);
-          }
-        }
-      });
-      kotaku.load(function(result) {
-        if (!result.error) {
-          var container = document.getElementById("kotaku");
-          for (var i = 0; i < result.feed.entries.length; i++) {
-            var entry = result.feed.entries[i];
-            //for faster addition and avoid reflow use document.createDocumentFragment()
-            var div = document.createElement("li");
-            anchor = document.createElement("a") 
-                anchor.setAttribute("href",entry.link)
-                anchor.appendChild(document.createTextNode(entry.title))
-            div.appendChild(anchor)
-            container.appendChild(div);
-          }
-        }
-      });
+      var Phoronix = new google.feeds.Feed("http://feeds.feedburner.com/Phoronix")
 
-    theH.load(function(result) {
-        if (!result.error) {
-          var container = document.getElementById("the-h");
-          for (var i = 0; i < result.feed.entries.length; i++) {
-            var entry = result.feed.entries[i];
-            var list = document.createElement("li");
-            anchor = document.createElement("a") 
-                anchor.setAttribute("href",entry.link)
-                anchor.appendChild(document.createTextNode(entry.title))
-            list.appendChild(anchor)
-            container.appendChild(list);
+      function loadRSS(feedObject, targetID) {
+        feedObject.load(function(result){ 
+           if (!result.error) {
+              var container = document.getElementById(targetID);
+              for (var i = 0; i < result.feed.entries.length; i++) {
+                var entry = result.feed.entries[i];
+                var div = document.createElement("li");
+                anchor = document.createElement("a") 
+                    anchor.setAttribute("href",entry.link)
+                    anchor.appendChild(document.createTextNode(entry.title))
+                div.appendChild(anchor)
+                container.appendChild(div);
+              }
           }
-        }
-      });
-
-
-    }
-    google.setOnLoadCallback(initialize);
+        });
+      }
+loadRSS(Phoronix, "phoronix");
+loadRSS(theH, "the-h");
+loadRSS(kotaku, "kotaku");
+loadRSS(slashdot, "slashdot");
+}
+google.setOnLoadCallback(initialize);
     
-    </script>
-  </head>
+</script>
+</head>
   <body>
- <nav >
+<nav>
  <ul class='nav nav-pills'> 
      <li><a href="http://dacresni.github.com/index.html">Home</a></li>
      <li><a href="http://dacresni.github.com/news.html">News </a></li>
-     <li><a href="http://dacresni.github.com/documentation/writing.html">News </a></li>
+     <li><a href="http://dacresni.github.com/documentation/writing.html">Writing</a></li>
  </ul>
+ </nav>
      <div  class="container"> 
         <div class=content >
                 <br/>
-        <section class="row" >
-            <div class="span16">
+        <section class="row-fluid">
             <p>This is a page full of the kind of news I find most important.  </p>
-            </div>
         </section>
-        <section class="row">
+        <section class="row-fluid">
             
-            <div class="span-one-third">
+            <div class="span6">
                 <h2> Slashdot </h2>
                 <ul class="unstyled" id="slashdot" > </ul>
             </div>
-            <div class="span-one-third">
+            <div class="span6">
                 <h2> Kotaku </h2>
                 <ul class="unstyled" id="kotaku" > </ul>
             </div>
-                
-            <div class="span-one-third">
+            <div class="span6">
                 <h2> The H </h2>
                 <ul class="unstyled" id="the-h" > </ul>
             </div>
+            <div class="span4">
+                <h2> Phoronix </h2>
+                <ul class="unstyled" id="phoronix" > </ul>
+            </div>
         </section>
+    </div>
     </div>
   </body>
 </html>
