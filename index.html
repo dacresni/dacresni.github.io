@@ -1,53 +1,95 @@
-<!DOCTYPE HTML>
-<html >
+<!DOCTYPE html>
+<!-- in html5 there's only one doctype --> 
+<html>
 <head>
+<title>News  </title>
 <meta charset="utf-8">
-<link rel="stylesheet" href="bootstrap/css/bootstrapn.css" />
+<!-- <link rel="stylesheet" href="bootstrap-1.2.0.css" type="text/css" -->  
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
 <link rel="javascript" href="bootstrap/js/bootstrap.min.js">
-<link rel="stylesheet" href="css/base.css" type='text/css' >  
-<link href="http://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet" type="text/css" /> 
- <title> Nehemiah Dacres's home page </title> 
+<link rel="stylesheet" href="css/base.css" type="text/css" > 
+<script src="https://www.google.com/jsapi?key=ABQIAAAAfwAYC6Pp1NQAjJdBXfJIVxTm39AwUPmlR8g9EC933jgzRpFBGBRYX9fd-O2pCeit7bAZF8iX6eo0GQ" type="text/javascript"></script>
+
+<script type="text/javascript">
+google.load("feeds","1");
+    function initialize() {
+      var slashdot = new google.feeds.Feed("http://rss.slashdot.org/Slashdot/slashdot")
+      //var siliconera= new google.feeds.Feed("http://feeds.feedburner.com/siliconera/MkOc?format=xml")
+      var theH = new google.feeds.Feed("http://www.h-online.com/grand-atom.xml")
+      var kotaku= new google.feeds.Feed("http://feeds.gawker.com/kotaku/full")
+      var Phoronix = new google.feeds.Feed("http://feeds.feedburner.com/Phoronix")
+
+      function loadRSS(feedObject, targetID) {
+        feedObject.load(function(result){ 
+           if (!result.error) {
+              var container = document.getElementById(targetID);
+              for (var i = 0; i < result.feed.entries.length; i++) {
+                var entry = result.feed.entries[i];
+                var div = document.createElement("li");
+                anchor = document.createElement("a") 
+                    anchor.setAttribute("href",entry.link)
+                    anchor.appendChild(document.createTextNode(entry.title))
+                div.appendChild(anchor)
+                container.appendChild(div);
+              }
+          }
+        });
+      }
+loadRSS(Phoronix, "phoronix");
+loadRSS(theH, "the-h");
+loadRSS(kotaku, "kotaku");
+loadRSS(slashdot, "slashdot");
+}
+google.setOnLoadCallback(initialize);
+    
+</script>
 </head>
-<body>
+  <body>
+<nav>
+ <ul class='nav nav-pills'> 
+     <li><a href="http://dacresni.github.com/index.html">Home</a></li>
+     <li><a href="http://dacresni.github.com/links.html">Links</a></li>
+     <li><a href="http://dacresni.github.com/documentation/writing.html">Writing</a></li>
+ </ul>
+ </nav>
  <h1>Nehemiah Dacres's awesome home page </h1>
-    Other <a href="./documentation/writing.html">documents</a> and a link to today's <a href="news.html"> news</a>
-Cool Linux Distros
-<ul>
- <li><a href="http://blog.linuxmint.com" >Mint</a></li>
-<li><a href="http://archlinux.org/">Arch Linux</a></li> 
+     <div  class="container"> 
+        <br/>
+        <em> MY Projects</em>
+            <dl>
+             <dt> <a href="http://dacresni.github.com/grabmem/" >grabmem</a></dt>
+             <dd>A a memory bound load simulator </dd>
+             <dt> <a href="http://dacresni.github.com/parse-tree-grapher/" >parse tree grapher </a> </dt>
+             <dd>Displays the parse tree of any Context Free Grammar as a binary tree </dd>
+            </dl>
+        <div class=content >
+        <p>This is a page full of the kind of news I find most important.  </p>
+        <section class="row-fluid">
+            <section class="span12">
+                    <div class="span6">
+                        <h2> Slashdot </h2>
+                        <ul class="unstyled" id="slashdot" > </ul>
+                    </div>
+                    <div class="span6">
+                        <h2> Kotaku </h2>
+                        <ul class="unstyled" id="kotaku" > </ul>
+                    </div>
+            </section>
+        </section>
+        <section class="row-fluid">
+            <section class="span12">
+                    <div class="span6">
+                        <h2> The H </h2>
+                        <ul class="unstyled" id="the-h" > </ul>
+                    </div>
+                    <div class="span6">
+                        <h2> Phoronix </h2>
+                        <ul class="unstyled" id="phoronix" > </ul>
+                    </div>
+            </section>
+        </section>
+    </div>
+    </div>
+  </body>
+</html>
 
-</ul>
-Favorite Operating Systems
-<ol>
-    <li><a href="http://osxbook.com" >Macintosh/Darwin</a></li>
-    <li><a href="http://kernelnewbies.org/" >Linux</a></li>
-</ol>
-Favorite Desktop environments
-<ul>
-    <li><a href="http://fluxbox.org" >fluxbox</a> (other boxes are nice too) </li>
-    <li><a href="http://kde.org" >KDE</a></li> 
-</ul>
-Linux kernel features to look at.
-<ul> 
-    <li><a href="http://cgrouphacking.blogspot.com/" >CGroups</a></li>
-    <li><a href="http://www.linux-kvm.org" >KVM</a></li>
-    <li><a href="https://btrfs.wiki.kernel.org/">BtrFS</a></li>
-</ul>
-Cool Programming Languages
-<ul>
-    <li><a href="http://golang.org/" >Go</a></li>
-    <li><a href="http://python.org/" >Python</a></li>
-</ul>
-Projetcs to watch 
-<ul>
-    <li> <a href="http://www.blender.org" >blender </a>  </li>
-    <li> <a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/" > WebRTC </a>  </li>
-    </ul>
-<footer>
-
-
-<p> did anyone expect Apple to mantain <a href="http://cups.org" >CUPS</a> well? </p>
-</footer>
- 
-
-</body></html>
