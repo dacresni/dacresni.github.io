@@ -7,6 +7,7 @@ body {
 	color:#FFFFFF;
 	background-color:#000000;
         padding-top: 20px;
+        list-style-type: hiragana;
 
 }
 nav {
@@ -35,6 +36,7 @@ h2 {
 	color:#00F94B;
     font-family:HuRaMar;
 }
+
 
 a {
 	color:cyan;
