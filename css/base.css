@@ -8,11 +8,17 @@ body {
 	background-color:#000000;
         padding-top: 20px;
         list-style-type: hiragana;
+}
+ .nav a:hover {
+	color:black;
+}
+a {
+	color:cyan;
+}
+a:hover {
+        color:white;
+}
 
-}
-nav {
-    
-}
 p {
     font-family:'Nova Flat', cursive;
 }
@@ -38,13 +44,7 @@ h2 {
 }
 
 
-a {
-	color:cyan;
-}
 
-a:hover {
-        color:white;
-}
 
 
 footer {
