@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-<!-- in html5 there's only one doctype --> 
-<html>
+<html >
 <head>
-<title>News  </title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/base.css" type="text/css" > 
+
+	<link rel="stylesheet" href="dijit/themes/claro/claro.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+	<script>dojoConfig = {parseOnLoad: true}</script>
+	<script src='dojo/dojo.js'></script>
+	<link rel="stylesheet" href="css/base.css" type="text/css" > 
+	<style type="text/css">
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow:hidden;
+}
+
+#borderContainer {
+    width: 100%;
+    height: 100%;
+}
+	</style>
+	
+	<script>
+require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);
+	</script>
 </head>
-<body>
-	<article class="fluid-row span12">
-	<section class="span6" id="my-projects" >
-	</section>
-	<section class="span6" id="starred-projects" >
-	</section>
-	</article>
-</body></html>
+<body class="claro container-fluid">
+    <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'sidebar',  liveSplitters:false" id="borderContainer" class="row-fluid">
+    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:false, region:'leading'" class="span4" >Hi, I'm leading pane</div>
+    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:false, region:'center'" class="span5" >Hi, I'm center pane</div>
+</div>
+</body>
+</html>
+
