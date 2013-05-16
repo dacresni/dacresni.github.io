@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Nova+Flat|Nova+Square);
-
+<link rel="stylesheet" href="../css/font-awesome.min.css">
 html {
     background-color:black;
 }
@@ -17,6 +17,14 @@ a {
 }
 a:hover {
         color:white;
+}
+a.refresh {
+	color:#00F94B;
+/*	border-style:solid;
+	border-color:#00F94B;
+	border-width: 1px;
+	border-radius:10px;
+*/
 }
 
 p {
