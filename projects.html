@@ -6,7 +6,8 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
 	<script>dojoConfig = {parseOnLoad: true}</script>
-	<script src='dojo/dojo.js'></script>
+	<script src="//ajax.googleapis.com/ajax/libs/dojo/1.9.0/dijit/dijit.js"></script> 
+	<script src='dojo/dojo.js'></script> 
 	<link rel="stylesheet" href="css/base.css" type="text/css" > 
 	<style type="text/css">
 html, body {
@@ -23,14 +24,16 @@ html, body {
 	</style>
 	
 	<script>
-require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);
+	require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);
 	</script>
 </head>
-<body class="claro container-fluid">
-    <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'sidebar',  liveSplitters:false" id="borderContainer" class="row-fluid">
-    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:false, region:'leading'" class="span4" >Hi, I'm leading pane</div>
-    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:false, region:'center'" class="span5" >Hi, I'm center pane</div>
-</div>
+<body class="claro">
+    <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline',gutters:true,liveSplitters:true" id="borderContainer" class="container-fluid">
+	    <section id="starred-repos"data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:false, region:'center'" >Hi, I'm center pane
+	    
+	    </section>
+    <footer id="gitsts" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:false, region:'bottom',splitter:true" >Hi, I'm bottom pane</footer >
+</div >
 </body>
 </html>
 
