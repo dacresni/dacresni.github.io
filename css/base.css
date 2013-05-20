@@ -6,11 +6,16 @@ html {
 body {
 	color:#FFFFFF;
 	background-color:#000000;
-        padding-top: 20px;
         list-style-type: hiragana;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    /* dont set overflow:hidden; disables scroll bar */
 }
  .nav a:hover {
 	color:black;
+	margin-bottom:0;
 }
 a {
 	color:cyan;
@@ -48,18 +53,12 @@ h1 {
 }
 h2 {
 	color:#00F94B;
-    font-family:HuRaMar;
+  font-family:HuRaMar;
+}
+#borderContainer {
+    width: 100%;
+    height: 100%;
 }
 
 
-
-
-
-footer {
-	list-style-type:none;
-}
-
-footer ul li {
-	display:inline;
-}
 

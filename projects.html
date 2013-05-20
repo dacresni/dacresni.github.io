@@ -2,47 +2,34 @@
 <html >
 <head>
 
-	<link rel="stylesheet" href="dijit/themes/claro/claro.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" /> 
-	<script>dojoConfig = {parseOnLoad: true}</script>
-	 <script src="dijit/dijit.js"></script> 
-	<script src='dojo/dojo.js'></script> 
-	<title> Projects </title>
-<link rel="stylesheet" href="css/base.css" type="text/css" > 
-	<style type="text/css">
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    overflow:hidden;
-}
-
-#borderContainer {
-    width: 100%;
-    height: 100%;
-}
-	</style>
-	
-	<script>
-	require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);
+    <link rel="stylesheet" href="dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" /> 
+    <script>dojoConfig = {parseOnLoad: true}</script>
+    <script src="dijit/dijit.js"></script> 
+    <script src='dojo/dojo.js'></script> 
+    <title> Projects </title>
+    <link rel="stylesheet" href="css/base.css" type="text/css" > 
+    <script>
+    require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);
 	</script>
 </head>
 <body class="claro">
-    <!-- <nav>
+     <nav>
      <ul class='nav nav-tabs'> 
 	 <li><a href="http://dacresni.github.io/index.html">Home</a></li>
 	 <li><a href="http://dacresni.github.io/links.html">Links</a></li>
 	 <li><a href="http://dacresni.github.io/documentation/writing.html">Writing</a></li>
      </ul>
-     </nav> -->
+     </nav> 
     
      <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline',gutters:true,liveSplitters:true" id="borderContainer" class="container-fluid">
-	 <header  data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:false, region:'top'"  > <h1> projects </h1> </header>
-	<section id="starred-repos" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:false, region:'center'" >Hi, I'm center pane
-	
+	<header data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:false, region:'top'"  > <h1> projects </h1> </header>
+	<section id="repos" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:false, region:'center'" >Hi, I'm center pane
+	<div id="starred-repos"> </div>
+	<div id="my-repos"> </div>
 	</section>
-	<footer id="gitsts" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom',splitter:true" >Hi, I'm bottom pane</footer>
+	<footer id="gitsts" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom',splitter:true,minSize:80" >Hi, I'm bottom pane</footer>
     </div >
 </body>
 </html>
