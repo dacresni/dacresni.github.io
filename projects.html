@@ -11,8 +11,21 @@
     <title> Projects </title>
     <link rel="stylesheet" href="css/base.css" type="text/css" > 
     <script>
-    require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);
-	</script>
+        require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"])
+    </script>
+    <script>
+        require(["dijit/layout/ContentPane","dijit/layout/AccordionContainer","dojo/domReady!","dojo/request","dojo/json"],
+        function(AccordionContainer,ContentPane, request,JSON) {
+            request.get("https://api.github.com/users/dacresni/starred").then(
+                function(response) {
+                    var aContainer = new AccordionContainer({style:"width:50%"},"starred-repos");
+                    for( var repo in response[0] )
+                        aContainer.addChild(new ContentPane({ title:repo.name, content:repo.}))
+                }
+        
+          );
+        });
+    </script>
 </head>
 <body class="claro">
      <nav>
