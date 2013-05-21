@@ -15,19 +15,26 @@
     <script>
         require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);
     </script>
-    <!-- <script>
-        require(["dijit/layout/ContentPane","dijit/layout/AccordionContainer","dojo/domReady!","dojo/request","dojo/json"],
-        function(AccordionContainer,ContentPane, request,JSON) {
+    <script>
+        require(["dijit/layout/ContentPane","dijit/layout/AccordionContainer","dojo/domReady!","dojo/request","dojo/json","dojo/dom","dojo/dom-construct"],
+        function(AccordionContainer,ContentPane, request,JSON,dom,domConstuct ) {
             request.get("https://api.github.com/users/dacresni/starred").then(
                 function(response) {
                     var aContainer = new AccordionContainer({style:"width:50%"},"starred-repos");
-                    for( var repo in response[0] )
-                        aContainer.addChild(new ContentPane({ title:repo.name, content:repo.}))
-                }
-        
+		    //for( var repo in response.data ){
+		//	    aContainer.addChild(new ContentPane({ title:repo.name, 
+		//		    content: domConstuct.create("a", {href:repo.url,title:repo.description})
+		//	    }));
+		    }
+	 	    aContainer.startup();
+		},
+		function(error){
+			ErrContainer = new ContentPane({title:error,content:error}, "starred-repos");
+			console.log(error);
+		}
           );
         });
-    </script> -->
+    </script> 
 </head>
 <body class="claro">
      <nav>
