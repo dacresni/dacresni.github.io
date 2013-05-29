@@ -2,41 +2,29 @@
 <html >
 <head>
 
-    <link rel="stylesheet" href="dijit/themes/claro/claro.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css" /> 
-    <script>dojoConfig = {parseOnLoad: true}</script>
-    <script src="dojo/dojo.js"></script>
-    <script src="dijit/dijit.js"></script>
-    <!--<script src="//ajax.googleapis.com/ajax/libs/dojo/1.9.0/dojo/dojo.js"></script> -->
-    <!--<script src="//ajax.googleapis.com/ajax/libs/dojo/1.9.0/dijit/dijit.js"></script> -->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <title> Projects </title>
     <link rel="stylesheet" href="css/base.css" type="text/css" > 
     <script>
-        require(["dojo/parser", "dijit/layout/ContentPane", "dijit/layout/BorderContainer"]);
-    </script>
-    <script>
-        require(["dijit/layout/ContentPane","dijit/layout/AccordionContainer","dojo/domReady!","dojo/request","dojo/json","dojo/dom","dojo/dom-construct"],
-        function(AccordionContainer,ContentPane, request,JSON,dom,domConstuct ) {
-            request.get("https://api.github.com/users/dacresni/starred").then(
-                function(response) {
-                    var aContainer = new AccordionContainer({style:"width:50%"},"starred-repos");
-		    //for( var repo in response.data ){
-		//	    aContainer.addChild(new ContentPane({ title:repo.name, 
-		//		    content: domConstuct.create("a", {href:repo.url,title:repo.description})
-		//	    }));
-		    }
-	 	    aContainer.startup();
-		},
-		function(error){
-			ErrContainer = new ContentPane({title:error,content:error}, "starred-repos");
-			console.log(error);
-		}
-          );
-        });
+
+        function getStuff(url,id) {
+            $.getJSON(url).done(function(data) {
+                $.each(data,function(i,repo){
+                    //console.log("index="+i+"item"+repo.name);
+                    //$("<dt><a href='"+repo.url+"'>"+repo.name+"</ a>< /dt >").append("<dd>",{html:repo.description}).appendTo(id);
+                })
+            });
+            $(".span6").accordion({
+            collapsible:true
+            })
+        };
     </script> 
+
 </head>
-<body class="claro">
+<body >
      <nav>
      <ul class='nav nav-tabs'> 
 	 <li><a href="http://dacresni.github.io/index.html">Home</a></li>
@@ -44,15 +32,19 @@
 	 <li><a href="http://dacresni.github.io/documentation/writing.html">Writing</a></li>
      </ul>
      </nav> 
+     <header class="hero-unit">
+     <h1> Projects </h1>
+     </header>
+     <div class ="row">
+        <section class ="span6" >
+        <dl id="starred"></dl>
+        </section>
+        <section class="span6" >
+        <dl id= "watched"> </dl>
+        </section>
+    </div>
     
-     <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline',gutters:true,liveSplitters:true" id="borderContainer" class="container-fluid">
-	<header data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:false, region:'top'"  > <h1> projects </h1> </header>
-	<section id="repos" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:false, region:'center'" >Hi, I'm center pane
-	<div id="starred-repos"> </div>
-	<div id="my-repos"> </div>
-	</section>
-	<footer id="gitsts" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom',splitter:true,minSize:80" >Hi, I'm bottom pane</footer>
-    </div >
+   
 </body>
 </html>
 
