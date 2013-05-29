@@ -9,18 +9,24 @@
     <title> Projects </title>
     <link rel="stylesheet" href="css/base.css" type="text/css" > 
     <script>
-
-        function getStuff(url,id) {
-            $.getJSON(url).done(function(data) {
+    function getStuff(url,id) {
+            return $.getJSON(url, function(data) {
                 $.each(data,function(i,repo){
-                    //console.log("index="+i+"item"+repo.name);
-                    //$("<dt><a href='"+repo.url+"'>"+repo.name+"</ a>< /dt >").append("<dd>",{html:repo.description}).appendTo(id);
-                })
-            });
-            $(".span6").accordion({
-            collapsible:true
-            })
-        };
+                   console.log("index="+i+"item"+repo.name);
+		   dt= $("<dt/>").append("<a href=\""+repo.html_url+"\">"+repo.name+"</a>");
+		   dd = $("<dd/>",{'html':repo.description}).appendTo(id);
+		   dt.appendTo(id);
+		   dd.appendTo(id);
+		   }) 
+	
+	    });
+    }
+    $.when(
+	getStuff("https://api.github.com/users/dacresni/starred","#starred"),
+	getStuff("https://api.github.com/users/dacresni/subscriptions","#watched") )
+    .then(function(){
+    $(".span6").accordion({ header:"dt", collapsible:true, heightStyle:"content" }) ;
+    })
     </script> 
 
 </head>
@@ -30,21 +36,21 @@
 	 <li><a href="http://dacresni.github.io/index.html">Home</a></li>
 	 <li><a href="http://dacresni.github.io/links.html">Links</a></li>
 	 <li><a href="http://dacresni.github.io/documentation/writing.html">Writing</a></li>
-     </ul>
+	 </ul>
      </nav> 
      <header class="hero-unit">
      <h1> Projects </h1>
      </header>
-     <div class ="row">
-        <section class ="span6" >
+     <div class ="row"  >
+        <section class="span6" >
         <dl id="starred"></dl>
         </section>
         <section class="span6" >
         <dl id= "watched"> </dl>
         </section>
-    </div>
-    
-   
+     </div>
+     <footer>
+     </footer>
 </body>
 </html>
 
