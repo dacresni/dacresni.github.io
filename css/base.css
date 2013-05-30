@@ -13,6 +13,19 @@ html, body {
     height: 100%;
     /* dont set overflow:hidden; disables scroll bar */
 }
+header {
+	border-style:solid;
+	border-color:#00F94B;
+	border-width: thin;
+	border-radius:5px;
+	padding:10px;
+}
+ .main {
+  border-style:solid;
+border-color:#00F94B;
+border-width: thin;
+	padding:10px;
+}
  .nav a:hover {
 	color:black;
 	margin-bottom:0;
@@ -25,11 +38,7 @@ a:hover {
 }
 a.refresh {
 	color:#00F94B;
-/*	border-style:solid;
-	border-color:#00F94B;
-	border-width: 1px;
-	border-radius:10px;
-*/
+
 }
 
 p {
@@ -45,6 +54,7 @@ p {
     font-family: HuRaMar; 
     src: url('psoHRmar.TTF'); 
 }
+
 
 
 h1 {
