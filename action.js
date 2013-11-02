@@ -1,21 +1,25 @@
 
-google.load("feeds","1");
-google.setOnLoadCallback(initialize);
-function loadRSS(feedObject, targetID) {
-   feedObject.setNumEntries(8);
-   feedObject.load(function(result){ 
-   if (!result.error) {
-      var container = document.getElementById(targetID);
-      for (var i = 0; i < result.feed.entries.length; i++) {
-	var entry = result.feed.entries[i];
-	var div = document.createElement("li");
-	anchor = document.createElement("a") 
-	    anchor.setAttribute("href",entry.link)
-	    anchor.appendChild(document.createTextNode(entry.title))
-	div.appendChild(anchor)
-	container.appendChild(div);
-      }
+function pull(feedurl, containerID, maxItems = 8) {
+    //feedurl: string, the url of the rss feed
+    //containerID: string, the id of the container element, should be a flow element
+    //maxItems: integer, the maximum number of items to display
+   var container = $(containerID);
+   function success(xml, textStatus, jqXHR) {  
+        var xmlDoc = $.parseXML(xml)
+        xmlDoc.find("item").slice(0,maxItems).each(function() { 
+                $(containerID).append("<li></li>").append($(this).find("title").text()).append("<a></a>").append($(this).)
+               //http://codeforbrowser.com/blog/parse-an-rss-feed-with-jquery/ 
+                anchor.setAttribute("href",entry.link)
+                anchor.appendChild(document.createTextNode(entry.title))
+            div.appendChild(anchor)
+            container.appendChild(div);
+
+
+
+        } )
+	      }
   }
+    var xhr = $.get(feedurl) 
 });
 }
 function initialize() {
