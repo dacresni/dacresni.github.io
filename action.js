@@ -11,13 +11,14 @@ function putItemIntoContaner(item, container){
     el.appendChild(a);
     fragment.appendChild(el);
     var container = document.getElementsById(container);
+    container.appendChild(fragment);
     //iterate over item nodes >> <a href="node.link" >node.title</a>
     //put description in popup 
    
 }
 
 function pull(feedURL, containerID, maxItems = 8) {
-    //feedurl: string, the url of the rss feed
+    //feedURL: string, the url of the rss feed
     //containerID: string, the id of the container element, should be a flow element
     //maxItems: integer, the maximum number of items to display
     //
@@ -34,8 +35,8 @@ function pull(feedURL, containerID, maxItems = 8) {
         while (next & i < maxItems){ //WARNING, this will iterate over ENTIRE THING
             putItemIntoContaner(next, containerID);
             next = items.iterateNext();
+            i++;
         }
-
 
     };
     oReq.send();
