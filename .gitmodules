@@ -1,3 +1,3 @@
 [submodule "grabmem"]
 	path = grabmem
-        url = git://github.com/dacresni/grabmem.git 
+        url = git://github.com/dacresni/grabmem.git
