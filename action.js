@@ -1,16 +1,16 @@
 // parse rss sans jquery
 /* jshint esnext: true */
-function putItemIntoContaner(item, container){
+function putItemIntoContaner(item, containerID){
     var titleElement = item.getElementsByTagName("title")[0];
     var linkElement= item.getElementsByTagName("link")[0];
-    var framgent = document.createDocumentFragment();
-    el = document.createElement("li");
-    el.textContent = title.textContent;
-    a = document.createElement("a");
+    var fragment = document.createDocumentFragment();
+    var el = document.createElement("li");
+    el.textContent = titleElement.textContent;
+    var a = document.createElement("a");
     a.setAttribute("href",linkElement.textContent );
     el.appendChild(a);
     fragment.appendChild(el);
-    var container = document.getElementsById(container);
+    var container = document.getElementsById(containerID);
     container.appendChild(fragment);
     //iterate over item nodes >> <a href="node.link" >node.title</a>
     //put description in popup
@@ -49,4 +49,4 @@ var feeds = {
     linuxNews:"http://www.linux.com/feeds/original-content"
 };
 
-feeds.forEach()
+feeds.forEach(pull)
