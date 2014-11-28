@@ -18,7 +18,7 @@ function putItemIntoContaner(item, container){
 }
 
 function pull(feedURL, containerID ) {
-    var maxitems = 8 ;
+    var maxItems = 8 ;
     //feedURL: string, the url of the rss feed
     //containerID: string, the id of the container element, should be a flow element
     //maxItems: integer, the maximum number of items to display
@@ -42,3 +42,11 @@ function pull(feedURL, containerID ) {
     };
     oReq.send();
 }
+var feeds = {
+    Marketplace:"http://www.marketplace.org/latest-stories/long-feed.xml",
+    kotaku:"http://kotaku.com/rss",
+    theVerge:"http://www.theverge.com/rss/index.xml",
+    linuxNews:"http://www.linux.com/feeds/original-content"
+};
+
+feeds.forEach()
