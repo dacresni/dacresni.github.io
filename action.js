@@ -42,11 +42,16 @@ function pull(feedURL, containerID ) {
     };
     oReq.send();
 }
+var feed = new google.feeds.Feed("http://www.marketplace.org/latest-stories/long-feed.xml");
+var feed = new google.feeds.Feed("http://fastpshb.appspot.com/feed/1/fastpshb");
+var feed = new google.feeds.Feed("http://fastpshb.appspot.com/feed/1/fastpshb");
+var feed = new google.feeds.Feed("http://fastpshb.appspot.com/feed/1/fastpshb");
+
 var feeds = {
     Marketplace:"http://www.marketplace.org/latest-stories/long-feed.xml",
     kotaku:"http://kotaku.com/rss",
     theVerge:"http://www.theverge.com/rss/index.xml",
     linuxNews:"http://www.linux.com/feeds/original-content"
 };
-
+google.feeds
 feeds.forEach(pull)

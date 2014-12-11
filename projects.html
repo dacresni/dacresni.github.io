@@ -3,8 +3,8 @@
 <head>
 
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="bootstrap-custom/css/bootstrap.css" /> 
-    <link rel="stylesheet" href="css/base.css" type="text/css" > 
+    <link rel="stylesheet" href="bootstrap-custom/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/base.css" type="text/css" >
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <title> Projects </title>
@@ -17,8 +17,8 @@
 		   dd = $("<dd/>",{'html':repo.description}).append("<a href=\'"+repo.html_url+"\'><i class=\"icon-circle-arrow-right\"></i></a>");
 		   dt.appendTo(id);
 		   dd.appendTo(id);
-		   }) 
-	
+		   })
+
 	    });
     }
     $.when(
@@ -27,17 +27,17 @@
     .then(function(){
     $(".span6").accordion({ header:"dt", collapsible:true, heightStyle:"content" }) ;
     })
-    </script> 
+    </script>
 
 </head>
 <body >
      <nav >
-     <ul class='nav nav-tabs'> 
+     <ul class='nav nav-tabs'>
 	 <li><a href="http://dacresni.github.io/index.html">Home</a></li>
 	 <li><a href="http://dacresni.github.io/links.html">Links</a></li>
 	 <li><a href="http://dacresni.github.io/documentation/writing.html">Writing</a></li>
      </ul>
-     </nav> 
+     </nav>
      <div class="container-fluid">
      <header >
      <h1> Projects </h1>
@@ -57,4 +57,3 @@
      </div>
 </body>
 </html>
-
