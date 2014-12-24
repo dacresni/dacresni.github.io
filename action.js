@@ -46,7 +46,7 @@ var kotaku = new google.feeds.Feed("http://www.siliconera.com/feed/");
 var theVerge = new google.feeds.Feed("http://www.theverge.com/rss/index.xml");
 var linuxNews = new google.feeds.Feed("http://www.linux.com/feeds/original-content");
 
-var feeds = Map({
+var feeds = new Map({
     ["Marketplace","http://www.marketplace.org/latest-stories/long-feed.xml"],
     ["Siliconera","http://www.siliconera.com/feed/"],
     ["theVerge","http://www.theverge.com/rss/index.xml"],
