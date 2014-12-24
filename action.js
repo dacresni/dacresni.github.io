@@ -23,35 +23,35 @@ function pull(feedURL, containerID ) {
     //containerID: string, the id of the container element, should be a flow element
     //maxItems: integer, the maximum number of items to display
     //
-
-    //req.open("GET","http://www.siliconera.com/feed/",true)
-    var oReq = new XMLHttpRequest( );
-    oReq.open("GET",feedURL,false);
-    oReq.onload=function(){
-        var theXML = oReq.responseXML;
-        var items = theXML.evaluate("//item",theXML,null, XPathResult.ORDERED_NODE_ITERATOR_TYPE , null);
-        //items is an itterator that retuns <item> elements of the RSS Feed.
-        var next = items.iterateNext();
-        var i=0 ;
-        while (next & i < maxItems){ //WARNING, this could iterate over ENTIRE THING
-            putItemIntoContaner(next, containerID);
-            next = items.iterateNext();
-            i++;
+    var gFeed = new google.feeds.Feed(feedURL);
+    gFeed.setResultFormat(google.feeds.Feed.XML_FORMAT);
+    gfeed.laod(function(result){
+        if(!result.error) {
+            var theXML = result.xmlDocument;
+            var items = theXML.evaluate("//item",theXML,null, XPathResult.ORDERED_NODE_ITERATOR_TYPE , null);
+            //items is an itterator that retuns <item> elements of the RSS Feed.
+            var next = items.iterateNext();
+            var i=0 ;
+            while (next & i < maxItems){ //WARNING, this could iterate over ENTIRE THING
+                putItemIntoContaner(next, containerID);
+                next = items.iterateNext();
+                i++;
+            }
         }
 
     };
     oReq.send();
 }
 var Marketplace = new google.feeds.Feed("http://www.marketplace.org/latest-stories/long-feed.xml");
-var kotaku = new google.feeds.Feed("http://kotaku.com/rss");
+var kotaku = new google.feeds.Feed("http://www.siliconera.com/feed/");
 var theVerge = new google.feeds.Feed("http://www.theverge.com/rss/index.xml");
 var linuxNews = new google.feeds.Feed("http://www.linux.com/feeds/original-content");
 
 var feeds = Map({
-    [Marketplace,"http://www.marketplace.org/latest-stories/long-feed.xml"],
-    [kotaku,"http://kotaku.com/rss"],
-    [theVerge,"http://www.theverge.com/rss/index.xml"],
-    [linuxNews,"http://www.linux.com/feeds/original-content"]
+    ["Marketplace","http://www.marketplace.org/latest-stories/long-feed.xml"],
+    ["Siliconera","http://www.siliconera.com/feed/"],
+    ["theVerge","http://www.theverge.com/rss/index.xml"],
+    ["linuxNews","http://www.linux.com/feeds/original-content"]
 });
 
 feeds.forEach(pull)
