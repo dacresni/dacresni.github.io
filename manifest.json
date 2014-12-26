@@ -5,9 +5,9 @@
   "default_locale": "en",
   "description": "A feed reader for Dacresni",
   "permissions": [
-    "http://www.marketplace.org/latest-stories/long-feed.xml",
-    "http://www.siliconera.com/feed/",
-    "http://www.theverge.com/rss/index.xml",
-    "http://www.linux.com/feeds/original-content",
-  ],
+    "http://www.marketplace.org/*",
+    "http://www.siliconera.com/*",
+    "http://www.theverge.com/*",
+    "http://www.linux.com/*"
+  ]
 }
