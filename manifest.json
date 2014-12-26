@@ -9,5 +9,6 @@
     "http://www.siliconera.com/*",
     "http://www.theverge.com/*",
     "http://www.linux.com/*"
-  ]
+  ],
+  service_worker: { src: “action.js”, scope: “/next.html” }
 }
