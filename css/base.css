@@ -13,6 +13,7 @@ html, body {
     height: 100%;
     /* dont set overflow:hidden; disables scroll bar */
 }
+
 header {
 	border-style:solid;
 	border-color:#00F94B;
@@ -20,15 +21,22 @@ header {
 	border-radius:5px;
 	padding:10px;
 }
- .main {
-  border-style:solid;
-border-color:#00F94B;
-border-width: thin;
-	padding:10px;
+nav  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom-style:solid;
+    border-color:#00F94B;
+    border-width: thin;
+    /*padding:10px; */
 }
- .nav a:hover {
-	color:black;
-	margin-bottom:0;
+
+
+
+
+ nav a:hover {
+	color: #00F94B;
 }
 a {
 	color:cyan;
@@ -61,6 +69,7 @@ h1 {
 	color:#00F94B;
 	font-family: 'Nova Square', cursive; 
 }
+
 h2 {
 	color:#00F94B;
   font-family:HuRaMar;
