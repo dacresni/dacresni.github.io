@@ -79,5 +79,22 @@ h2 {
     height: 100%;
 }
 
+.text-right {
+    text-align:right;
+    margin: auto;
+    padding: 1em;
+}
 
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    margin: 0;
+}
+#watched {
+    grid-column: 1;
+}
+
+#starred{
+    grid-column: 2;
+}
 

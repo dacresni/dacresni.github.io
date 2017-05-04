@@ -13,7 +13,7 @@
             return $.getJSON(url, function(data) {
                 $.each(data,function(i,repo){
                    console.log("index="+i+"item"+repo.name);
-		   dt= $("<dt/>").append(repo.name);
+		   dt = $("<dt/>").append(repo.name);
 		   dd = $("<dd/>",{'html':repo.description}).append("<a href=\'"+repo.html_url+"\'><i class=\"icon-circle-arrow-right\"></i></a>");
 		   dt.appendTo(id);
 		   dd.appendTo(id);
@@ -42,12 +42,12 @@
      <header >
      <h1> Projects </h1>
      </header>
-     <div class ="row-fluid"  >
-        <section class="span6" style="overflow:auto">
+     <div class ="row"  >
+        <section style="overflow:auto">
 	<h3 class="text-right" > Starred</h3>
-        <dl id="starred" class= "text-right"></dl>
+        <dl id="starred" class="text-right"></dl>
         </section>
-        <section class="span6" >
+        <section  >
 	<h3 class="text-left"> Watched</h3>
         <dl id= "watched" class="text-left"> </dl>
         </section>
