@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Bidder Info</title>
+            </head>
+    <body style="margin:5% ">
+        <script type='javascript'>
+        // animate accordion
+        var rowAdd = function() {
+            if ('content' in document.createElement('template')) {
+                var t = document.querySeelctor('#newrow');
+                var tb = document.querySeelctor("tbody");
+                var clone = document.importNode(t.content,true);
+                tb.appendChild(clone);
+            }
+        }
+        var myButton  = document.querySeelctor('#add');
+        myButton.onclick = function(event){rowAdd();};
+        </script>
+
+        <template id='newrow'>
+            <tr>
+            <td><input type='text' ></td><td><input type='text' ></td><td><input type='text' ></td>
+            </tr>
+        </template>
+        <form id='sales_record'>
+            <h1>Sale <span id='salenumber'>188</span> <time>July 2017</time></h1>
+            <table>
+                <thead> 
+                    <tr>
+                        <td>Land Tax Suit # </td><td>Amount </td><td>Bidder #</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr> 
+                        <td><input type='text' ></td><td><input type='text' ></td><td><input type='text' ></td><td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><button name='add' onclick='rowAdd'>+</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </body>
+</html>
