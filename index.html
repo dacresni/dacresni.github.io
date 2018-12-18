@@ -6,6 +6,7 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="css/base.css" type="text/css" >
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script >
 
 
@@ -31,9 +32,12 @@
         <div class=content >
         <p>This is a page full of the kind of news I find most important.  </p>
         <section class="row-fluid">
-	    <div class="span6">
+	    <div class="span6"
 		    <h2 data-toggle="tooltip" title="Slashdot" > Slashdot <a href="#" data-feed="slashdot" class="refresh"> <i class="icon-refresh"></i></a> </h2>
-		<ul class="unstyled" id="slashdot" > </ul>
+		<ul class="unstyled" id="slashdot" > 
+                  <li v-for="item in feed">
+                      {{item.title }}
+                </ul>
 	    </div>
 	    <div class="span6">
 		<h2  data-toggle="tooltip" title="Kotaku"> Kotaku <a data-feed="kotaku" class="refresh"> <i class="icon-refresh"></i></a></h2>
@@ -47,10 +51,13 @@
 	    </div>
 	    <div class="span6">
 		<h2 data-toggle="tooltip" title="Phoronix"> Phoronix <a data-feed="phoronix" class="refresh"> <i class="icon-refresh"></i></a></h2>
-		<ul class="unstyled" id="phoronix" > </ul>
+		<ul class="unstyled" id="phoronix" ></ul>
 	    </div>
         </section>
     </div>
     </div>
+    <footer>
+    <script src="vuepart.js"></script> 
+    </footer>
   </body>
 </html>
