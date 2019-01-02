@@ -32,11 +32,13 @@
         <div class=content >
         <p>This is a page full of the kind of news I find most important.  </p>
         <section class="row-fluid">
-	    <div class="span6"
+            <div class="span6">
 		    <h2 data-toggle="tooltip" title="Slashdot" > Slashdot <a href="#" data-feed="slashdot" class="refresh"> <i class="icon-refresh"></i></a> </h2>
 		<ul class="unstyled" id="slashdot" > 
-                  <li v-for="item in feed">
-                      {{item.title }}
+                  <feed-item v-for="headline in articles"
+                      v-bind:feed="headline"
+                      v-bind:key="headline.id">
+                  </feed-item>
                 </ul>
 	    </div>
 	    <div class="span6">
