@@ -35,7 +35,7 @@
             <div class="span6">
 		    <h2 data-toggle="tooltip" title="Slashdot" > Slashdot <a href="#" data-feed="slashdot" class="refresh"> <i class="icon-refresh"></i></a> </h2>
 		<ul class="unstyled" id="slashdot" > 
-                  <feed-item v-for="headline in articles"
+                  <feed-item v-for="(headline, url) in articles"
                       v-bind:feed="headline"
                       v-bind:key="headline.id">
                   </feed-item>
