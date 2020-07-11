@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Nova+Flat|Nova+Square);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
 <link rel="stylesheet" href="../css/font-awesome.min.css">
 html {
     background-color:black;
@@ -55,25 +56,28 @@ p {
     
 @font-face {
     font-family: pso; 
-    src: url('pso_font.TTF'); 
+    src: url('font/pso_font.TTF'); 
 } 
 
 @font-face {
     font-family: HuRaMar; 
-    src: url('psoHRmar.TTF'); 
+    src: url('/font/psoHRmar.TTF'); 
 }
 
-
-
 h1 {
-	color:#00F94B;
-	font-family: 'Nova Square', cursive; 
+    color:#00F94B;
+    font-family: 'Nova Square', cursive; 
 }
 
 h2 {
-	color:#00F94B;
+  color:#00F94B;
   font-family:HuRaMar;
 }
+
+.vertical {
+  writing-mode: vertical-lr;
+}
+
 #borderContainer {
     width: 100%;
     height: 100%;
