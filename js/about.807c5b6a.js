@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{f820:function(e,t,s){"use strict";s.r(t);var n=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},r=[function(){var e=this,t=e.$createElement,s=e._self._c||t;return s("div",{staticClass:"about"},[s("h1",[e._v("About Nehemiah ")]),s("p",[e._v(" Welcome my website. It is a work in progress using "),s("a",{attrs:{href:"https://vuejs.org/"}},[e._v("Vue.js")])])])}],a=s("2877"),u={},i=Object(a["a"])(u,n,r,!1,null,null,null);t["default"]=i.exports}}]);
+//# sourceMappingURL=about.807c5b6a.js.map
