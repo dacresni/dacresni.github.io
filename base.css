@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+html {
+    background-color:black;
+}
+body {
+	color:#FFFFFF;
+	background-color:#000000;
+        list-style-type: hiragana;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    /* dont set overflow:hidden; disables scroll bar */
+}
+
+header {
+	border-style:solid;
+	border-color:#00F94B;
+	border-width: thin;
+	border-radius:5px;
+	padding:10px;
+}
+nav  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom-style:solid;
+    border-color:#00F94B;
+    border-width: thin;
+    /*padding:10px; */
+}
+
+
+
+
+ nav a:hover {
+	color: #00F94B;
+}
+a {
+	color:cyan;
+}
+a:hover {
+        color:white;
+}
+a.refresh {
+	color:#00F94B;
+
+}
+
+p {
+    font-family:'Nova Flat', cursive;
+}
+    
+@font-face {
+    font-family: pso; 
+    src: url('font/pso_font.TTF'); 
+} 
+
+@font-face {
+    font-family: HuRaMar; 
+    src: url('/font/psoHRmar.TTF'); 
+}
+
+h1 {
+    color:#00F94B;
+    font-family: 'Nova Square', cursive; 
+}
+
+h2 {
+  color:#00F94B;
+  font-family:HuRaMar;
+}
+
+.vertical {
+  writing-mode: vertical-lr;
+}
+
+#borderContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.text-right {
+    text-align:right;
+    margin: auto;
+    padding: 1em;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    margin: 0;
+}
+#watched {
+    grid-column: 1;
+}
+
+#starred{
+    grid-column: 2;
+}
+
