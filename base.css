@@ -5,22 +5,23 @@ html {
     background-color:black;
 }
 body {
-	color:#FFFFFF;
-	background-color:#000000;
-        list-style-type: hiragana;
+    color:#FFFFFF;
+    background-color:#000000;
+    list-style-type: hiragana;
 }
 html, body {
     width: 100%;
     height: 100%;
-    /* dont set overflow:hidden; disables scroll bar */
+    margin:0;
+    padding:0;
 }
 
 header {
-	border-style:solid;
-	border-color:#00F94B;
-	border-width: thin;
-	border-radius:5px;
-	padding:10px;
+    border-style:solid;
+    border-color:#00F94B;
+    border-width: thin;
+    border-radius:5px;
+    padding:10px;
 }
 nav  {
     display: flex;
@@ -30,14 +31,11 @@ nav  {
     border-bottom-style:solid;
     border-color:#00F94B;
     border-width: thin;
-    /*padding:10px; */
+    padding:20px; 
 }
 
-
-
-
- nav a:hover {
-	color: #00F94B;
+nav a:hover {
+  color: #00F94B;
 }
 a {
 	color:cyan;
@@ -70,23 +68,16 @@ h1 {
 }
 
 h2 {
-  color:#00F94B;
-  font-family:HuRaMar;
+    color:#00F94B;
+    font-family:HuRaMar;
+}
+
+ul {
+    list-style:none;
 }
 
 .vertical {
-  writing-mode: vertical-lr;
-}
-
-#borderContainer {
-    width: 100%;
-    height: 100%;
-}
-
-.text-right {
-    text-align:right;
-    margin: auto;
-    padding: 1em;
+    writing-mode: vertical-lr;
 }
 
 .row {
@@ -94,11 +85,11 @@ h2 {
     grid-template-columns: repeat(2, 1fr); 
     margin: 0;
 }
-#watched {
+#project-list {
     grid-column: 1;
 }
 
-#starred{
+#subscriptions-list {
     grid-column: 2;
 }
 
