@@ -16,13 +16,6 @@ html, body {
     padding:0;
 }
 
-header {
-    border-style:solid;
-    border-color:#00F94B;
-    border-width: thin;
-    border-radius:5px;
-    padding:10px;
-}
 nav  {
     display: flex;
     flex-direction: row;
@@ -31,7 +24,7 @@ nav  {
     border-bottom-style:solid;
     border-color:#00F94B;
     border-width: thin;
-    padding:20px; 
+    padding:30px; 
 }
 
 nav a:hover {
@@ -48,13 +41,9 @@ a.refresh {
 
 }
 
-p {
-    font-family:'Nova Flat', cursive;
-}
-    
 @font-face {
     font-family: pso; 
-    src: url('font/pso_font.TTF'); 
+    src: url('/font/pso_font.TTF'); 
 } 
 
 @font-face {
@@ -62,9 +51,12 @@ p {
     src: url('/font/psoHRmar.TTF'); 
 }
 
+p {
+    font-family:serif;
+}
 h1 {
     color:#00F94B;
-    font-family: 'Nova Square', cursive; 
+    font-family: sans-serif; 
 }
 
 h2 {
