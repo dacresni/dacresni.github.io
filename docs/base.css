@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+html {
+    background-color:black;
+}
+body {
+    color:#FFFFFF;
+    background-color:#000000;
+    list-style-type: hiragana;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+
+nav  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom-style:solid;
+    border-color:#00F94B;
+    border-width: thin;
+    padding:30px; 
+}
+
+nav a:hover {
+  color: #00F94B;
+}
+a {
+	color:cyan;
+}
+a:hover {
+        color:white;
+}
+a.refresh {
+	color:#00F94B;
+
+}
+
+@font-face {
+    font-family: pso; 
+    src: url('/font/pso_font.TTF'); 
+} 
+
+@font-face {
+    font-family: HuRaMar; 
+    src: url('/font/psoHRmar.TTF'); 
+}
+@font-face {
+    font-family: PSOtest; 
+    src: url('/font/pso_test.ttf'); 
+}
+p {
+    font-family:serif;
+}
+h1 {
+    color:#00F94B;
+    font-family: sans-serif; 
+}
+
+h2 {
+    color:#00F94B;
+    font-family:HuRaMar;
+}
+h3 {
+    color:#00F94B;
+    font-family:PSOtest;
+}
+
+ul {
+    list-style:none;
+}
+
+.vertical {
+    writing-mode: vertical-lr;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    margin: 0;
+}
+#project-list {
+    grid-column: 1;
+}
+
+#subscriptions-list {
+    grid-column: 2;
+}
+
