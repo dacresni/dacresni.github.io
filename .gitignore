@@ -3,6 +3,7 @@
 
 # Others
 sql/
+node_modules
 *.Cache
 ClientBin/
 [Ss]tyle[Cc]op.*
