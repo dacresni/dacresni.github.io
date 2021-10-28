@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html class="pageview">
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<base target="_top">
+<style type="text/css">
+  
+
+
+/* default css */
+
+table {
+  font-size: 1em;
+  line-height: inherit;
+  border-collapse: collapse;
+}
+
+
+tr {
+  
+  text-align: left;
+  
+}
+
+
+div, address, ol, ul, li, option, select {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+
+pre {
+  font-family: Courier New;
+  white-space: pre-wrap;
+  margin:0;
+}
+
+body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+img {
+  -moz-force-broken-image-icon: 1;
+}
+
+@media screen {
+  html.pageview {
+    background-color: #f3f3f3 !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  
+
+  body {
+    min-height: 1100px;
+    
+    counter-reset: __goog_page__;
+  }
+  
+  * html body {
+    height: 1100px;
+  }
+  /* Prevent repaint errors when scrolling in Safari. This "Star-7" css hack
+     targets Safari 3.1, but not WebKit nightlies and presumably Safari 4.
+     That's OK because this bug is fixed in WebKit nightlies/Safari 4 :-). */
+  html*#wys_frame::before {
+    content: '\A0';
+    position: fixed;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .pageview body {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+    width: 648px !important;
+    margin: 15px auto 25px;
+    padding: 40px 50px;
+  }
+  /* IE6 */
+  * html {
+    overflow-y: scroll;
+  }
+  * html.pageview body {
+    overflow-x: auto;
+  }
+  
+
+  
+    
+    
+    .writely-callout-data {
+      display: inline-block;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      margin-left: -1px;
+    }
+    
+
+    .writely-footnote-marker {
+      background-image: url('MISSING');
+      background-color: transparent;
+      background-repeat: no-repeat;
+      width: 7px;
+      overflow: hidden;
+      height: 16px;
+      vertical-align: top;
+
+      
+      -moz-user-select: none;
+    }
+    .editor .writely-footnote-marker {
+      cursor: move;
+    }
+    .writely-footnote-marker-highlight {
+      background-position: -15px 0;
+      -moz-user-select: text;
+    }
+    .writely-footnote-hide-selection ::-moz-selection, .writely-footnote-hide-selection::-moz-selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection ::selection, .writely-footnote-hide-selection::selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection {
+      cursor: move;
+    }
+
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+
+  
+
+
+  
+  .br_fix span+br:not(:-moz-last-node) {
+    
+    position:relative;
+    
+    left: -1ex
+    
+  }
+
+  
+  #cb-p-tgt {
+    font-size: 8pt;
+    padding: .4em;
+    background-color: #ddd;
+    color: #333;
+  }
+  #cb-p-tgt-can {
+    text-decoration: underline;
+    color: #36c;
+    font-weight: bold;
+    margin-left: 2em;
+  }
+  #cb-p-tgt .spin {
+    width: 16px;
+    height: 16px;
+    background: url(//ssl.gstatic.com/docs/clipboard/spin_16o.gif) no-repeat;
+  }
+}
+
+h6 { font-size: 8pt }
+h5 { font-size: 8pt }
+h4 { font-size: 10pt }
+h3 { font-size: 12pt }
+h2 { font-size: 14pt }
+h1 { font-size: 18pt }
+
+blockquote {padding: 10px; border: 1px #DDD dashed }
+
+.webkit-indent-blockquote { border: none; }
+
+a img {border: 0}
+
+.pb {
+  border-width: 0;
+  page-break-after: always;
+  /* We don't want this to be resizeable, so enforce a width and height
+     using !important */
+  height: 1px !important;
+  width: 100% !important;
+}
+
+.editor .pb {
+  border-top: 1px dashed #C0C0C0;
+  border-bottom: 1px dashed #C0C0C0;
+}
+
+div.google_header, div.google_footer {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+/* Table of contents */
+.editor div.writely-toc {
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+}
+.writely-toc > ol {
+  padding-left: 3em;
+  font-weight: bold;
+}
+ol.writely-toc-subheading {
+  padding-left: 1em;
+  font-weight: normal;
+}
+/* IE6 only */
+* html writely-toc ol {
+  list-style-position: inside;
+}
+.writely-toc-none {
+  list-style-type: none;
+}
+.writely-toc-decimal {
+  list-style-type: decimal;
+}
+.writely-toc-upper-alpha {
+  list-style-type: upper-alpha;
+}
+.writely-toc-lower-alpha {
+  list-style-type: lower-alpha;
+}
+.writely-toc-upper-roman {
+  list-style-type: upper-roman;
+}
+.writely-toc-lower-roman {
+  list-style-type: lower-roman;
+}
+.writely-toc-disc {
+  list-style-type: disc;
+}
+
+/* Ordered lists converted to numbered lists can preserve ordered types, and
+   vice versa. This is confusing, so disallow it */
+ul[type="i"], ul[type="I"], ul[type="1"], ul[type="a"], ul[type="A"] {
+  list-style-type: disc;
+}
+
+ol[type="disc"], ol[type="circle"], ol[type="square"] {
+  list-style-type: decimal;
+}
+
+/* end default css */
+
+
+  /* default print css */
+  @media print {
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    div.google_header, div.google_footer {
+      display: block;
+      min-height: 0;
+      border: none;
+    }
+
+    div.google_header {
+      flow: static(header);
+    }
+
+    /* used to insert page numbers */
+    div.google_header::before, div.google_footer::before {
+      position: absolute;
+      top: 0;
+    }
+
+    div.google_footer {
+      flow: static(footer);
+    }
+
+    /* always consider this element at the start of the doc */
+    div#google_footer {
+      flow: static(footer, start);
+    }
+
+    span.google_pagenumber {
+      content: counter(page);
+    }
+
+    span.google_pagecount {
+      content: counter(pages);
+    }
+
+    .endnotes {
+      page: endnote;
+    }
+
+    /* MLA specifies that endnotes title should be 1" margin from the top of the page. */
+    @page endnote {
+      margin-top: 1in;
+    }
+
+    callout.google_footnote {
+      
+      display: prince-footnote;
+      footnote-style-position: inside;
+      /* These styles keep the footnote from taking on the style of the text
+         surrounding the footnote marker. They can be overridden in the
+         document CSS. */
+      color: #000;
+      font-family: Times New Roman;
+      font-size: 12.0pt;
+      font-weight: normal;
+    }
+
+    /* Table of contents */
+    #WritelyTableOfContents a::after {
+      content: leader('.') target-counter(attr(href), page);
+    }
+
+    #WritelyTableOfContents a {
+      text-decoration: none;
+      color: black;
+    }
+
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+  }
+
+  @page {
+    @top {
+      content: flow(header);
+    }
+    @bottom {
+      content: flow(footer);
+    }
+    @footnotes {
+      border-top: solid black thin;
+      padding-top: 8pt;
+    }
+  }
+  /* end default print css */
+
+
+/* custom css */
+
+
+/* end custom css */
+
+/* ui edited css */
+
+body {
+  font-family: Times New Roman;
+  
+  font-size: 12.0pt;
+  line-height: 2;
+  background-color: #ffffff;
+}
+/* end ui edited css */
+
+
+/* editor CSS */
+.editor a:visited {color: #551A8B}
+.editor table.zeroBorder {border: 1px dotted gray}
+.editor table.zeroBorder td {border: 1px dotted gray}
+.editor table.zeroBorder th {border: 1px dotted gray}
+
+
+.editor div.google_header, .editor div.google_footer {
+  border: 2px #DDDDDD dashed;
+  position: static;
+  width: 100%;
+  min-height: 2em;
+}
+
+.editor .misspell {background-color: yellow}
+
+.editor .writely-comment {
+  font-size: 9pt;
+  line-height: 1.4;
+  padding: 1px;
+  border: 1px dashed #C0C0C0
+}
+
+
+/* end editor CSS */
+
+</style>
+
+  
+  <title>better than an appliance</title>
+
+</head>
+
+<body 
+    
+    >
+    
+    
+    
+Appliance analasis<br>
+September 21, 2009<br>
+HPC Project<br>
+<br>
+&nbsp;&nbsp;&nbsp; There are virtues for a NAS appliance, we just need to find them.<br>
+Hypothesis: we can do better than and NexentaStor and OpenFiler but we must deal with them on separate accords because of the differences in their NAS approach. After evaluating the software, I can make the argument that their hindrances are not worth their utility.<br>
+<br>
+&nbsp;&nbsp; &nbsp;We will be evaluating the two solutions on two aspects. Performance and Manageability. Performance test will be on the performance of the filesystems' features and proficiency of storing, retrieving and maintain data integrity.&nbsp; The Manageability evaluation will be on the NAS software's utility, usability and stability.<br>
+&nbsp;&nbsp; &nbsp;First IOzone will test the read and write performances of the file systems in use. Nexenta uses zfs for both volume management and file management; it serves up files via NFSv4. OpenFiler uses lvm for volume management and We will be using ext3 rather than xfs for file management because in recent benchmarks <a href=http://www.phoronix.com/scan.php?page=article&amp;item=ext4_btrfs_nilfs2&amp;num=4 id=b4be target=_blank title=phoronix.com>ext3 beat xfs in larger write performance</a>. <a href=http://www.phoronix.com/scan.php?page=article&amp;item=ext4_btrfs_nilfs2&amp;num=5 id=f:i6 target=_blank title="dbench results">Ext3 also beat xfs</a> in a multi client load simulator (<a href=http://samba.org/ftp/tridge/dbench/README id=gc-m target=_blank title=dbench>dbench</a>).&nbsp;<br>
+<br>
+&nbsp;&nbsp; &nbsp;OpenFiler has the issue of an inoperable default install because it gives no hints on what space is allocated for what purpose. It seems allocating space via LVM and not labeling it gives you a volume group to start with. It also seems <span style=COLOR:#ff0000>unaware</span> of empty space on which you can create Logical Volumes with. The interface for creating partitions is based on cylinders instead of size. Nexenta is an OpenSolaris based NAS with Ubuntu userland.&nbsp; I have recently acquired root on the device so perhaps it will become more manageable after editing the /etc/apt/sources.conf (and the ntp server)<br>
+<br>
+&nbsp;&nbsp; &nbsp;Open filer has a retarded install and Nexenta wants exorbant ammounts of cache for things I could do my self. After Sun went thorugh so much trouble to make ZFS braindead easy they go and put a web interface with flash and stuff. My main problem is that it takes a bit of doing to install software on either of these. Nexenta's barron repository is the result of their decision to use the debian package manager and then instead of just making it an interface to the PKG system or the Image Packaging System, you have to build a deb package for (Open)solaris OS. conary of rPath linux, what OpenFiler is based on, is easily more annoying becuase there is no way (documented) to search the repository for a package from the CLI, you must do it from the web. It is indeed a good thing you can't do this from the web for either of these. but it took a week to get iozone and bonnie and bonnie++ installed. Here are the results of bonnie++ 3.1d, bonnie never installed<br>
+<hr size=2><br>
+server side tests.<br>
+<font size=2 style="FONT-FAMILY:Courier New"><br>
+------Sequential Output------ --Sequential Input- --Random-<br>
+-Per Chr- --Block-- -Rewrite- -Per Chr- --Block-- --Seeks--<br>
+&nbsp;Size K/sec %CP K/sec %CP K/sec %CP K/sec %CP K/sec %CP /sec %CP<br>
+4088M 42220&nbsp; 96 46641&nbsp; 19 23521&nbsp; 6&nbsp; 48500&nbsp; 93 51763&nbsp;&nbsp; 5 399.9&nbsp; 1<br>
+------Sequential Create------ --------Random Create--------<br>
+-Create-- --Read--- -Delete-- -Create-- --Read--- -Delete--<br>
+files /sec %CP /sec %CP /sec %CP /sec %CP /sec %CP /sec %CP<br>
+16 +++++ +++ +++++ +++ +++++ +++ +++++ +++ +++++ +++ +++++ +++<br>
+</font><br>
+<font size=2><span style="FONT-FAMILY:Courier New">Nexenta&nbsp; </span><br style="FONT-FAMILY:Courier New">
+<span style="FONT-FAMILY:Courier New">------Sequential Output------ --Sequential Input- --Random-<br>
+</span><span style="FONT-FAMILY:Courier New">-Per Chr- --Block-- -Rewrite- -Per Chr- --Block-- --Seeks--</span><br style="FONT-FAMILY:Courier New">
+<span style="FONT-FAMILY:Courier New">Size K/sec %CP K/sec %CP K/sec %CP K/sec %CP K/sec %CP&nbsp; /sec %CP</span><br style="FONT-FAMILY:Courier New">
+<span style="FONT-FAMILY:Courier New">4088M 38718&nbsp; 33 40806&nbsp; 12 24103&nbsp;&nbsp; 9 51860&nbsp; 54 51208&nbsp;&nbsp; 7 341.3&nbsp;&nbsp; 1</span><br style="FONT-FAMILY:Courier New">
+<span style="FONT-FAMILY:Courier New">------Sequential Create------ --------Random Create--------</span><br style="FONT-FAMILY:Courier New">
+<span style="FONT-FAMILY:Courier New">-Create-- --Read--- -Delete-- -Create-- --Read--- -Delete--</span><br style="FONT-FAMILY:Courier New">
+<span style="FONT-FAMILY:Courier New">files&nbsp; /sec %CP&nbsp; /sec %CP&nbsp; /sec %CP&nbsp; /sec %CP&nbsp; /sec %CP&nbsp; /sec %CP</span><br style="FONT-FAMILY:Courier New">
+<span style="FONT-FAMILY:Courier New">&nbsp;&nbsp; 16 15313&nbsp; 99 +++++ +++ 22322&nbsp; 99&nbsp; 7357&nbsp; 99 +++++ +++&nbsp; 8265&nbsp; 99</span><br style="FONT-FAMILY:Courier New">
+</font> As you can see from these bonnie++ readings, the NexentaSTOR sequential ouptut was actually slower, but took up less CPU time.<br>
+<hr size=2><br>
+IOZONE test<br>
+&nbsp;&nbsp;&nbsp; In write performance there was an issue with the write performance of OpenFiler as evedent from the hole in the graph but the test were reproduced in time.<br>
+<img src="images/df75qh6p_26ch9dxhhc_b.png" style="WIDTH:648px; HEIGHT:346.807px; FLOAT:left; MARGIN-LEFT:0pt; MARGIN-RIGHT:1em"> Through the second test we acquired sufficient results and evidence that the tests were consistent (and reproducible). The results below illustrate the single difference in the two test subjects.<br>
+<img id=s3w7 src="images/df75qh6p_31fq8vwvhn_b.png" style="WIDTH:648px; HEIGHT:365.06px; FLOAT:left; MARGIN-LEFT:0pt; MARGIN-RIGHT:1em"><br>
+&nbsp;Above are the Nexenta results, and below are the Open Filer results.<br>
+<div id=hi_j style=TEXT-ALIGN:left>
+  <img src="images/df75qh6p_32qgxdhkg7_b.png" style="WIDTH:648px; HEIGHT:356.633px">
+</div>
+As one can see from the measurements, the Openfiler results are more planar and less varying. However, the plain barely approaches the medians of the write speeds for NexentaStore. Nexenta has varying speeds that show an amoritization for larger file writes (not writes to larger files). The sweet spot for Nexenta seems to be a little less than the size of the O.S cache, 1024.<br>
+&nbsp;The graphs for the rest of the performance were identical which is a significant result for such differing environments.
+<div id=otev style=TEXT-ALIGN:left>
+  <img src="images/df75qh6p_29fzmwd9g5_b.png" style="WIDTH:648px; HEIGHT:493.495px">
+</div>
+&nbsp;<br>
+<hr size=2>The client side tests will be performed from a machine running a Linux with a version of Bonne++ and iozone. The tests specifically gauge NFS server performance, later we will guage their client performance. To test their performance with respect to the client, we will run IOZone and Bonnie++ 1.03d test from an Ubuntu an desktop distro.&nbsp; We could compare sysconfig and nfs properties but it is a distribution closest to our intended clients.<br>
+<br></body>
+</html>
