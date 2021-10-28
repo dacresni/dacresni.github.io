@@ -50,7 +50,10 @@ a.refresh {
     font-family: HuRaMar; 
     src: url('/font/psoHRmar.TTF'); 
 }
-
+@font-face {
+    font-family: PSOtest; 
+    src: url('/font/pso_test.ttf'); 
+}
 p {
     font-family:serif;
 }
@@ -62,6 +65,10 @@ h1 {
 h2 {
     color:#00F94B;
     font-family:HuRaMar;
+}
+h3 {
+    color:#00F94B;
+    font-family:PSOtest;
 }
 
 ul {
