@@ -4,8 +4,8 @@
     <h2>{{blog.name}}</h2>
       <li v-for="post in posts" :key="post.id">
         <h3><a v-bind:href="post.url" target="_blank"> {{post.title}} </a></h3>
-        <!-- @click="post.url" transition to component loading post-detail-view from selfLink URL --> 
-            <p> Author :{{post.author.displayName}} Published:{{post.published}}</p>
+            <p> Author: {{post.author.displayName}} Published: {{post.published}}</p>
+            <p v-html = post.content > </p>
       </li>
     </ul>
   </section>
