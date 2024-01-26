@@ -20,6 +20,8 @@ nav  {
     border-color:#00F94B;
     border-width: thin;
     padding:30px; 
+    font-size:40px;
+    line-height:0
 }
 
 nav a:hover {
