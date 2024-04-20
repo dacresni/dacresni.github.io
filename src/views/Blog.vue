@@ -1,7 +1,7 @@
 <template>
   <section id="Blog" >
     <ul id='post-list'  >
-    <h2>{{blog.name}}</h2>
+	    <!--- eventually source multiple blogs <h2>{{blog.name}}</h2> --->
       <li v-for="post in posts" :key="post.id">
         <h3><a v-bind:href="post.url" target="_blank"> {{post.title}} </a></h3>
             <p> Author: {{post.author.displayName}} Published: {{post.published}}</p>
@@ -32,7 +32,7 @@ export default {
         .then(response => response.json())
           .then(data => this.posts = data.items)
             .then(data => this.nextToken = data.nextPageToken)
-            .then(data => this.selfLink = data.selfLink)
+            //.then(data => this.selfLink = data.selfLink)
       },
       fetchBlog(){
         fetch("https://www.googleapis.com/blogger/v3/blogs/6205685541397557767/?key=AIzaSyArcKKnRP2Eb-I9laF1uTjhS3qa8xvVtXk") 

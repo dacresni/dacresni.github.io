@@ -11,11 +11,12 @@ body {
     list-style-type: hiragana;
 }
 
-nav  {
-    /* display: flex; */
+nav {
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    border-bottom-style:solid;
     border-bottom-style:solid;
     border-color:#00F94B;
     border-width: thin;

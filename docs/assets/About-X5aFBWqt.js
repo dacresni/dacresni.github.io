@@ -1,0 +1,1 @@
+import{_ as s,c as t,o,a as e,b as c}from"./index-DqoVj2rh.js";const a={},n={class:"about"},r=e("h1",null,"About Nehemiah ",-1),_=e("p",null,[c(" Welcome to my website. It is a work in progress using "),e("a",{href:"https://vuejs.org/"},"Vue.js")],-1),i=[r,_];function u(d,h){return o(),t("div",n,i)}const f=s(a,[["render",u]]);export{f as default};
