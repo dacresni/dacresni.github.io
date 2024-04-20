@@ -5,6 +5,7 @@ import './style.css'
 
 
 const router = createRouter({
+  linkActiveClass: 'active',
   history: createWebHistory(),
   routes : [
   {
@@ -37,6 +38,7 @@ const router = createRouter({
   },
   {
     path: '/posts',
+    props: true,
     name: 'Blog',
     meta: {
       title: "About Nehemiah's Awesome Blog"

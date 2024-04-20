@@ -24,6 +24,9 @@ nav {
     font-size:40px;
     line-height:0
 }
+nav .active {
+  font-style: italic;
+}
 
 nav a:hover {
   color: #00F94B;

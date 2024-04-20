@@ -1,7 +1,7 @@
 <template>
   <section id="Blog" >
     <ul id='post-list'  >
-	    <!--- eventually source multiple blogs <h2>{{blog.name}}</h2> --->
+	<h2>{{$route.params.id}}</h2> 
       <li v-for="post in posts" :key="post.id">
         <h3><a v-bind:href="post.url" target="_blank"> {{post.title}} </a></h3>
             <p> Author: {{post.author.displayName}} Published: {{post.published}}</p>
