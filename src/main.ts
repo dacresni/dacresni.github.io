@@ -11,7 +11,8 @@ const router = createRouter({
     path: '/',
     name: 'Home',
     meta: {
-      title: "Nehemiah's Project Dashboard"
+      title: "Nehemiah's Project Dashboard",
+      transition: 'fade'
     },
     component: () => import(/* webpackChunkName: "home" */ './views/Home.vue')
 
@@ -20,7 +21,8 @@ const router = createRouter({
     path: '/about',
     name: 'About',
     meta: {
-      title: "About Nehemiah's Awesome Website"
+      title: "About Nehemiah's Awesome Website",
+      transition: 'fade'
     },
     component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
   },
@@ -28,7 +30,8 @@ const router = createRouter({
     path: '/photos',
     name: 'Photography',
     meta: {
-      title: "About Nehemiah's Awesome Photography"
+      title: "About Nehemiah's Awesome Photography",
+      transition: 'fade'
     },
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -39,7 +42,8 @@ const router = createRouter({
     path: '/posts',
     name: 'Blog',
     meta: {
-      title: "About Nehemiah's Awesome Blog"
+      title: "About Nehemiah's Awesome Blog",
+      transition: 'fade'
     },
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route

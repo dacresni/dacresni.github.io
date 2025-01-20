@@ -9,7 +9,7 @@
       <li> <a  href ="https://www.threads.net/@dacresni"> Threads </a> </li>
       <li> <a  href ="https://www.youtube.com/@dacresni"> YouTube </a> </li>
       <li> <a  href ="https://www.instagram.com/dacresni/"> Instagram </a></li>
-      <li> <a  href ="https://mastodon.social/@dacresni"> Mastodon </a></li>
+      <li> <a  href ="https://bsky.app/profile/dacresni.bsky.social">Blue Sky</a></li>
     </ul>
   </div>
 </template>
