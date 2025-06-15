@@ -1,7 +1,7 @@
 <template>
   <article id="Picts" >
-    <ul id='photo-list'  >
     <h2>{{photoset_metadata.title}}</h2>
+    <ul id='photo-list'  >
       <li v-for="photo in photoset_metadata.photo" :key="photo.id">
         <img :src= "photo.url_m" :alt="photo.title"> <h3>Title: {{photo.title}} </h3>
       </li>
