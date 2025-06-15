@@ -90,3 +90,12 @@ ul {
     grid-column: 2;
 }
 
+#photo-list {
+    display: flex;
+    flex-flow: wrap;
+}
+
+
+#photo-list li {
+    flex-grow: 10
+}
