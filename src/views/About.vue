@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <main class="about">
     <h1>About Nehemiah </h1>
     <p>
       Welcome to my website. It is a work in progress using <a href="https://vuejs.org/">Vue.js</a>
@@ -11,5 +11,5 @@
       <li> <a  href ="https://www.instagram.com/dacresni/"> Instagram </a></li>
       <li> <a  href ="https://bsky.app/profile/dacresni.bsky.social">Blue Sky</a></li>
     </ul>
-  </div>
+  </main>
 </template>

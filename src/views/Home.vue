@@ -1,5 +1,5 @@
 <template>
-  <article id="home" class='row'>
+  <main id="home" class='row'>
     <ul id='project-list' style='text-align:right;' >
     <h2>Projects</h2>
       <li v-for="repo in repos" :key="repo.id">
@@ -12,7 +12,7 @@
         <h3 class='name' ><a v-bind:href="sub.html_url">{{sub.name}} </a></h3> <p class='description'> {{sub.description}} </p>
       </li>
     </ul>
-  </article>
+  </main>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <section id="Blog" >
+  <main id="Blog" >
     <ul id='post-list'  >
 	    <!--- eventually source multiple blogs <h2>{{blog.name}}</h2> --->
       <li v-for="post in posts" :key="post.id">
@@ -8,7 +8,7 @@
             <p v-html = post.content > </p>
       </li>
     </ul>
-  </section>
+  </main>
 </template>
 
 <script>
